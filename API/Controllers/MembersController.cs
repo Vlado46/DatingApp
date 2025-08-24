@@ -34,10 +34,10 @@ namespace API.Controllers
         public async Task<ActionResult<IReadOnlyList<Photo>>> GetMemberPhotos(string memberId)
         {
             var photos = await memberRepository.GetPhotosForMemberAsync(memberId);
-            if (photos == null || !photos.Any())
-            {
-                return NotFound();
-            }
+            // if (photos == null || !photos.Any())
+            // {
+            //     return NotFound();
+            // }
             return Ok(photos);
         }
 
