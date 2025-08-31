@@ -24,3 +24,12 @@ export type EditableMember = {
   city: string;
   country: string;
 };
+
+export class MemberParams {
+  gender?: string;
+  pageNumber = 1;
+  pageSize = 10;
+  minAge = 18;
+  maxAge = 99;
+  orderBy = 'lastActive';
+}
